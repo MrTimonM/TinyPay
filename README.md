@@ -1,6 +1,7 @@
 # 💸 TinyPay - Offline-First Crypto Payments on Aptos
 
-![TinyPay Banner](https://img.shields.io/badge/Apt## 🚀 How to Run TinyPay
+![TinyPay Banner](https://i.ibb.co/3yHfdv4k/Chat-GPT-Image-Oct-4-2025-12-18-41-AM.png) 
+
 
 ### Running the Full Application (GUI + Backend)
 
