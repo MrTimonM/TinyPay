@@ -3,9 +3,7 @@
 ![TinyPay Banner](https://i.ibb.co/3yHfdv4k/Chat-GPT-Image-Oct-4-2025-12-18-41-AM.png) 
 
 
-### Running the Full Application (GUI + Backend)
 
-1. **Start Backend Server** (Terminal 1):in-blue) ![License](https://img.shields.io/badge/license-MIT-green) ![Status](https://img.shields.io/badge/status-hackathon-orange)
 
 **TinyPay** is an innovative offline-first payment system built on the Aptos blockchain. It enables users to create, verify, and settle cryptocurrency payments even without internet connectivity, with robust double-spend prevention.
 
