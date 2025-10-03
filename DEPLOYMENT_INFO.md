@@ -176,7 +176,7 @@ https://explorer.aptoslabs.com/account/0xe23bceaed51c4268300174ad8cd4d4f27750b53
 
 ---
 
-## 🎯 For Hackathon Judges
+
 
 **Key Highlights:**
 
@@ -185,26 +185,5 @@ https://explorer.aptoslabs.com/account/0xe23bceaed51c4268300174ad8cd4d4f27750b53
 3. ✅ **Offline Capabilities** demonstrated in both CLI and GUI
 4. ✅ **Production-Ready Code** with error handling and events
 5. ✅ **Complete Documentation** with examples and guides
-
-**Live Demo:**
-- Run `npm run demo` for CLI demo
-- Run `npm run dev` for GUI demo
-- All transactions verifiable on Aptos Explorer
-
----
-
-## 📞 Support
-
-For issues or questions:
-- Check `QUICKSTART.md` for setup help
-- Review `README.md` for architecture details
-- Examine code comments in source files
-
----
-
-**Built for Aptos Hackathon** 🚀
-
-*Last Updated: October 2, 2025*
-
 
 

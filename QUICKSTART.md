@@ -45,117 +45,52 @@ The smart contract has been deployed to Aptos Devnet:
 - [View Account](https://explorer.aptoslabs.com/account/0xe23bceaed51c4268300174ad8cd4d4f27750b53a5ef41277defa9f28898b5ebd?network=devnet)
 - [Deployment TX](https://explorer.aptoslabs.com/txn/0x7cb89847ed02c27022ef1bcd417f6687719bb574ddb99c516c54cfea4bbcab40?network=devnet)
 
-## 🎮 Running the Demo
+## 🎮 Running TinyPay
 
-### Option 1: CLI Demo (Recommended First)
+Launch the complete TinyPay application with visual interface:
 
-See the complete offline-to-online flow in your terminal:
-
+#### Step 1: Start the Backend Server
 ```bash
-# From project root
-npm run demo
-
-# Or from backend directory
 cd backend
-npm run demo
+npm run server
 ```
+This starts the API server that handles transaction processing.
 
-This will simulate:
-1. ✅ User creating offline signed transaction
-2. ✅ Merchant1 verifying signature offline
-3. ✅ Merchant2 forwarding transaction
-4. ✅ Merchant3 broadcasting to Aptos Devnet
-5. ✅ Double-spend prevention demonstration
-
-### Option 2: GUI Demo (Visual)
-
-Launch the beautiful React interface:
-
+#### Step 2: Start the Frontend (Open New Terminal)
 ```bash
-# From project root
-npm run dev
-
-# Or from frontend directory
 cd frontend
 npm run dev
 ```
+This starts the React development server.
 
-Then open [http://localhost:3000](http://localhost:3000)
+#### Step 3: Open Your Browser
+Navigate to [http://localhost:5173](http://localhost:5173) (or the port shown in terminal)
 
 **GUI Controls:**
 - Click **"▶️ Start Payment Flow"** to see the animated simulation
 - Click **"🚫 Attempt Double-Spend"** to see prevention in action
 - Click **"🔄 Reset"** to start over
 
-## 🔧 Manual Testing (Advanced)
+## 🔧 Advanced Features
 
-### Create a Custom Offline Payment
+### Web Interface Controls
 
-```bash
-cd backend
+- **Start Payment Flow**: Initiates the complete offline-to-online payment simulation
+- **Attempt Double-Spend**: Demonstrates the nonce-based double-spend prevention
+- **Reset**: Clears the current state and allows you to start over
+- **View Explorer**: Links to Aptos blockchain explorer for transaction verification
 
-# Sign a transaction offline
-npm run sign -- \
-  <PRIVATE_KEY> \
-  <RECIPIENT_ADDRESS> \
-  <AMOUNT_IN_APT> \
-  <NONCE> \
-  0xe23bceaed51c4268300174ad8cd4d4f27750b53a5ef41277defa9f28898b5ebd
+### Backend API Endpoints
 
-# Example:
-npm run sign -- \
-  0x123abc... \
-  0xdef456... \
-  2.5 \
-  1696800000 \
-  0xe23bceaed51c4268300174ad8cd4d4f27750b53a5ef41277defa9f28898b5ebd
-```
-
-### Verify the Transaction Offline
-
-```bash
-npm run verify -- signed_tx.json
-```
-
-### Forward Between Merchants
-
-```bash
-npm run forward -- signed_tx.json merchant2_tx.json "Merchant1"
-npm run forward -- merchant2_tx.json merchant3_tx.json "Merchant2"
-```
-
-### Broadcast to Blockchain
-
-```bash
-npm run broadcast -- merchant3_tx.json
-```
+The backend server provides REST API endpoints for:
+- Transaction signing and verification
+- Payment flow simulation
+- Blockchain interaction
+- Real-time status updates
 
 ## 📊 What to Expect
 
-### CLI Demo Output
-
-```
-╔══════════════════════════════════════════════════════════╗
-║        TinyPay - Offline Payment Demo Flow              ║
-║   Crypto Payments Without Internet Connection 📱💸       ║
-╚══════════════════════════════════════════════════════════╝
-
-👤 Generating test accounts...
-💰 Funding test accounts from faucet...
-
-═══════════════════════════════════════════════════════════
-STEP 1: User creates offline payment 📱❌📡
-═══════════════════════════════════════════════════════════
-[OFFLINE] Creating signed transaction...
-  Sender: 0xabc...
-  Recipient: 0xdef...
-  Amount: 2.5 APT
-  Nonce: 1696800000
-
-[... and so on ...]
-```
-
-### GUI Demo
+### Web Application
 
 You'll see:
 - **4 animated boxes** representing User → Merchant1 → Merchant2 → Merchant3
@@ -204,9 +139,9 @@ npm run deploy
 
 ## 🎯 Next Steps
 
-1. **Watch the demo** - Run both CLI and GUI versions
-2. **Try custom transactions** - Create your own test payments
-3. **Read the code** - Explore Move contract, backend scripts, React components
+1. **Explore the web interface** - Use the GUI to understand the payment flow
+2. **Try custom transactions** - Create your own test payments through the web interface
+3. **Read the code** - Explore Move contract, backend API, React components
 4. **Customize** - Add features, improve UI, extend functionality
 
 ## 📚 Documentation
@@ -218,6 +153,7 @@ npm run deploy
 
 ## 🔗 Useful Links
 
+- **GitHub Repository**: https://github.com/MrTimonM/TinyPay
 - **Aptos Devnet Faucet**: https://faucet.devnet.aptoslabs.com/
 - **Aptos Explorer**: https://explorer.aptoslabs.com/?network=devnet
 - **Move Language Docs**: https://aptos.dev/move/move-on-aptos/

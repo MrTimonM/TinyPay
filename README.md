@@ -1,6 +1,10 @@
 # 💸 TinyPay - Offline-First Crypto Payments on Aptos
 
-![TinyPay Banner](https://img.shields.io/badge/Aptos-Blockchain-blue) ![License](https://img.shields.io/badge/license-MIT-green) ![Status](https://img.shields.io/badge/status-hackathon-orange)
+![TinyPay Banner](https://img.shields.io/badge/Apt## 🚀 How to Run TinyPay
+
+### Running the Full Application (GUI + Backend)
+
+1. **Start Backend Server** (Terminal 1):in-blue) ![License](https://img.shields.io/badge/license-MIT-green) ![Status](https://img.shields.io/badge/status-hackathon-orange)
 
 **TinyPay** is an innovative offline-first payment system built on the Aptos blockchain. It enables users to create, verify, and settle cryptocurrency payments even without internet connectivity, with robust double-spend prevention.
 
@@ -50,7 +54,7 @@ TinyPay solves this by enabling:
 
 ```bash
 # Clone the repository
-git clone <your-repo-url>
+git clone https://github.com/MrTimonM/TinyPay.git
 cd TinyPay
 
 # Run setup script
@@ -76,28 +80,47 @@ This will:
 - Initialize the payment registry
 - Save deployment info to `deployment.json`
 
-### Run CLI Demo
-
-```bash
-npm run demo
-```
-
-This runs a complete simulation showing:
-1. User creating offline payment
-2. Merchant1 verifying signature offline
-3. Merchant2 forwarding transaction
-4. Merchant3 broadcasting to blockchain
-5. Double-spend prevention demonstration
-
 ### Launch GUI Application
 
+#### Start the Backend Server
 ```bash
+cd backend
+npm run server
+```
+
+#### Start the Frontend (in a separate terminal)
+```bash
+cd frontend
 npm run dev
 ```
 
-Then open [http://localhost:3000](http://localhost:3000) in your browser.
+Then open [http://localhost:5173](http://localhost:5173) (or the port shown in terminal) in your browser.
 
-## 📁 Project Structure
+## � How to Run TinyPay
+
+### Method 1: Quick Demo (CLI)
+```bash
+# Run the complete demo simulation
+npm run demo
+```
+
+### Method 2: Full Application (GUI + Backend)
+
+1. **Start Backend Server** (Terminal 1):
+   ```bash
+   cd backend
+   npm run server
+   ```
+
+2. **Start Frontend** (Terminal 2):
+   ```bash
+   cd frontend  
+   npm run dev
+   ```
+
+3. **Open Browser**: Navigate to [http://localhost:5173](http://localhost:5173)
+
+## �📁 Project Structure
 
 ```
 TinyPay/
@@ -227,35 +250,30 @@ npm run broadcast -- signed_tx.json
 3. **On-Chain Validation**: Smart contract enforces all rules
 4. **Immutable Transaction History**: All settlements recorded on-chain
 
-## 🎬 Demo Video Script (2 minutes)
+## 🎬 Demo Flow (Web Interface)
 
-1. **Introduction (15s)**
-   - Show TinyPay logo and tagline
-   - Explain the offline payment problem
+1. **Introduction**
+   - Open TinyPay web application
+   - View the clean, intuitive interface
 
-2. **Offline Transaction Creation (20s)**
-   - User creates payment without internet
-   - Show QR code generation
+2. **Payment Flow Visualization**
+   - Click "Start Payment Flow" button
+   - Watch animated transaction flow between participants
+   - See real-time status updates
 
-3. **Merchant Verification (20s)**
-   - Merchant1 scans and verifies offline
-   - Show cryptographic verification
+3. **Transaction Settlement**
+   - Observe automatic blockchain broadcasting
+   - Click explorer links for verification
+   - View settlement confirmation
 
-4. **Transaction Forwarding (25s)**
-   - Show transaction hopping between merchants
-   - Display forwarding chain
+4. **Double-Spend Prevention**
+   - Click "Attempt Double-Spend" button
+   - See rejection message and explanation
+   - Understand nonce-based protection
 
-5. **Blockchain Settlement (30s)**
-   - Merchant3 broadcasts to Aptos
-   - Show explorer link and confirmation
-
-6. **Double-Spend Prevention (20s)**
-   - Attempt to reuse same transaction
-   - Show contract rejection
-
-7. **Conclusion (10s)**
-   - Recap benefits
-   - Call to action
+5. **Reset and Replay**
+   - Use reset button to start over
+   - Experiment with different scenarios
 
 ## 🌐 Deployed Contracts
 
@@ -271,31 +289,14 @@ https://explorer.aptoslabs.com/account/<CONTRACT_ADDRESS>?network=devnet
 
 ## 🧪 Testing
 
-### Manual Testing
+### Testing the Application
 
-1. **Single Payment Flow**
-```bash
-npm run demo
-```
-
-2. **Custom Payment**
-```bash
-cd backend
-# Generate keys
-npm run sign -- <your-private-key> <recipient> 1.5 <nonce> <registry>
-# Verify
-npm run verify
-# Broadcast
-npm run broadcast
-```
-
-### GUI Testing
-
-1. Start frontend: `npm run dev`
-2. Click "Start Payment Flow"
-3. Watch animation complete
-4. Click "Attempt Double-Spend"
-5. Verify rejection message
+1. **Start Backend**: `cd backend && npm run server`
+2. **Start Frontend**: `cd frontend && npm run dev`
+3. **Open Browser**: Navigate to http://localhost:5173
+4. **Test Payment Flow**: Click "Start Payment Flow" button
+5. **Test Double-Spend Prevention**: Click "Attempt Double-Spend" button
+6. **Verify Results**: Check transaction status and explorer links
 
 ## 📊 Performance Metrics
 
@@ -303,6 +304,10 @@ npm run broadcast
 - **Offline Verification**: < 50ms
 - **Transaction Size**: ~500 bytes
 - **On-Chain Settlement**: ~2-5 seconds (Aptos Devnet)
+
+## 🔗 Repository
+
+**GitHub**: [https://github.com/MrTimonM/TinyPay](https://github.com/MrTimonM/TinyPay)
 
 ## 🤝 Contributing
 
@@ -324,24 +329,9 @@ MIT License - see [LICENSE](LICENSE) file for details
 - **Move Language** for safe smart contract development
 - **Hackathon Organizers** for the opportunity
 
-## 📧 Contact
 
-Project built for Aptos Hackathon
 
-- GitHub: [Your GitHub]
-- Twitter: [@YourTwitter]
-- Email: your.email@example.com
 
-## 🎯 Future Roadmap
-
-- [ ] Mobile app with real QR scanning
-- [ ] Bluetooth/NFC transaction transfer
-- [ ] Multi-signature support
-- [ ] Batch transaction settlement
-- [ ] Merchant reputation system
-- [ ] Integration with Aptos Wallet
-- [ ] Support for multiple tokens
-- [ ] Geographic routing optimization
 
 ---
 
