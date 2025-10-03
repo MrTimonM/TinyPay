@@ -1,0 +1,19 @@
+[package]
+name = "TinyPay"
+version = "1.0.0"
+
+[addresses]
+tinypay = "0xe23bceaed51c4268300174ad8cd4d4f27750b53a5ef41277defa9f28898b5ebd"
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-core.git"
+rev = "mainnet"
+subdir = "aptos-move/framework/aptos-framework"
+
+[dependencies.AptosStdlib]
+git = "https://github.com/aptos-labs/aptos-core.git"
+rev = "mainnet"
+subdir = "aptos-move/framework/aptos-stdlib"
+
+
+

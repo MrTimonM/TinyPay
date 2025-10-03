@@ -1,0 +1,29 @@
+{
+  "name": "tinypay",
+  "version": "1.0.0",
+  "description": "Offline-First Payment System on Aptos - Crypto Payments Without Internet",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "backend:build": "cd backend && npm run build",
+    "backend:deploy": "cd backend && npm run deploy",
+    "backend:demo": "cd backend && npm run demo",
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install",
+    "setup": "npm run install:all",
+    "demo": "cd backend && npm run demo"
+  },
+  "keywords": [
+    "aptos",
+    "move",
+    "blockchain",
+    "offline",
+    "payments",
+    "cryptocurrency"
+  ],
+  "author": "TinyPay Team",
+  "license": "MIT"
+}
+
+
+
